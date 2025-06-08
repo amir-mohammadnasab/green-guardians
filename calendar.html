@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <!-- Page Transition -->
+<div class="page-transition" id="pageTransition">
+    <div class="loader">
+        <div class="leaf"></div>
+    </div>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقویم فعالیت‌ها - سازمان حمایت از محیط زیست سبز</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/styles/calendar.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <i class="fas fa-phone-alt"></i> 0098-9120472471
+                        <span class="mx-3">|</span>
+                        <i class="fas fa-envelope"></i> amirtester2020@yahoo.com
+                    </div>
+                </div>
+                <div class="col-md-6 text-start">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="logo-section">
+                        <div class="logo">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="org-name">
+                            <h1>سازمان حمایت از محیط زیست سبز</h1>
+                            <p>برای آینده‌ای سبزتر و پایدارتر</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="navbar-nav nav-rtl">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">صفحه اصلی</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">معرفی سازمان</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="managers.html">مدیران</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="calendar.html">تقویم فعالیت‌ها</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="membership.html">عضویت</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">ارتباط با ما</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="location.html">تماس با ما</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>تقویم فعالیت‌ها</h1>
+        </div>
+    </section>
+    
+    <!-- Calendar Section -->
+    <section class="calendar-section">
+        <div class="container">
+            <!-- Tabs -->
+            <div class="calendar-tabs">
+                <button class="tab-btn active" onclick="showEvents('future')">رویدادهای آینده</button>
+                <button class="tab-btn" onclick="showEvents('past')">رویدادهای گذشته</button>
+            </div>
+            
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h3 class="filter-title">فیلتر بر اساس نوع رویداد:</h3>
+                <div class="filter-options">
+                    <div class="filter-checkbox">
+                        <input type="checkbox" id="workshop" checked>
+                        <label for="workshop">کارگاه آموزشی</label>
+                    </div>
+                    <div class="filter-checkbox">
+                        <input type="checkbox" id="campaign" checked>
+                        <label for="campaign">کمپین</label>
+                    </div>
+                    <div class="filter-checkbox">
+                        <input type="checkbox" id="conference" checked>
+                        <label for="conference">همایش</label>
+                    </div>
+                    <div class="filter-checkbox">
+                        <input type="checkbox" id="training" checked>
+                        <label for="training">دوره آموزشی</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Future Events -->
+            <div id="future-events" class="events-container">
+                <div class="event-card" onclick="showEventDetails(1)">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">کارگاه آموزش بازیافت خانگی</h3>
+                            <span class="event-type type-workshop">کارگاه آموزشی</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">تیر</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 10:00 - 14:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> سالن اجتماعات سازمان</span>
+                        <span><i class="fas fa-users"></i> ظرفیت: 50 نفر</span>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="showEventDetails(2)">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">کمپین پاکسازی پارک‌های شهری</h3>
+                            <span class="event-type type-campaign">کمپین</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">تیر</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 08:00 - 12:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> پارک آزادی شیراز</span>
+                        <span><i class="fas fa-users"></i> ظرفیت: نامحدود</span>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="showEventDetails(3)">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">همایش ملی حفاظت از جنگل‌ها</h3>
+                            <span class="event-type type-conference">همایش</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">28</span>
+                            <span class="event-month">تیر</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 09:00 - 17:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> مرکز همایش‌های بین‌المللی</span>
+                        <span><i class="fas fa-users"></i> ظرفیت: 200 نفر</span>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="showEventDetails(4)">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">دوره آموزشی کشاورزی ارگانیک</h3>
+                            <span class="event-type type-training">دوره آموزشی</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">5</span>
+                            <span class="event-month">مرداد</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 16:00 - 19:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> مرکز آموزش سازمان</span>
+                        <span><i class="fas fa-users"></i> ظرفیت: 30 نفر</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Past Events -->
+            <div id="past-events" class="events-container" style="display: none;">
+                <div class="event-card past-event">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">کمپین کاشت درخت بهاری</h3>
+                            <span class="event-type type-campaign">کمپین</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">فروردین</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 09:00 - 13:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> پارک جنگلی قلات</span>
+                        <span><i class="fas fa-users"></i> شرکت‌کنندگان: 150 نفر</span>
+                    </div>
+                </div>
+                
+                <div class="event-card past-event">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">کارگاه ساخت کود کمپوست</h3>
+                            <span class="event-type type-workshop">کارگاه آموزشی</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">28</span>
+                            <span class="event-month">فروردین</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 10:00 - 13:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> باغ گیاه‌شناسی ارم</span>
+                        <span><i class="fas fa-users"></i> شرکت‌کنندگان: 45 نفر</span>
+                    </div>
+                </div>
+                
+                <div class="event-card past-event">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">همایش روز زمین</h3>
+                            <span class="event-type type-conference">همایش</span>
+                        </div>
+                        <div class="event-date">
+                            <span class="event-day">2</span>
+                            <span class="event-month">اردیبهشت</span>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <span><i class="fas fa-clock"></i> 09:00 - 18:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> تالار حافظ</span>
+                        <span><i class="fas fa-users"></i> شرکت‌کنندگان: 300 نفر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Event Details Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="event-modal-header">
+                    <h2 class="modal-event-title" id="modalEventTitle"></h2>
+                    <p id="modalEventType"></p>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="event-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h6>تاریخ برگزاری</h6>
+                                <p id="modalEventDate"></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h6>ساعت برگزاری</h6>
+                                <p id="modalEventTime"></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h6>محل برگزاری</h6>
+                                <p id="modalEventLocation"></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h6>ظرفیت</h6>
+                                <p id="modalEventCapacity"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-description">
+                        <h5>توضیحات رویداد</h5>
+                        <p id="modalEventDescription"></p>
+                    </div>
+                    
+                    <div class="event-requirements">
+                        <h5>شرایط حضور</h5>
+                        <p id="modalEventRequirements"></p>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="reserve-btn" id="reserveBtn" onclick="reserveEvent()">رزرو رویداد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-about">
+                    <div class="footer-widget">
+                        <h4>درباره سازمان</h4>
+                        <p>سازمان حمایت از محیط زیست سبز با بیش از یک دهه تجربه در زمینه حفاظت از محیط زیست، همواره در تلاش است تا با مشارکت مردمی، آینده‌ای سبزتر برای نسل‌های آینده رقم بزند.</p>
+                        <div class="footer-social mt-3">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <div class="footer-widget">
+                        <h4>دسترسی سریع</h4>
+                        <ul>
+                            <li><a href="index.html">صفحه اصلی</a></li>
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="managers.html">مدیران</a></li>
+                            <li><a href="calendar.html">رویدادها</a></li>
+                            <li><a href="membership.html">عضویت</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Activities -->
+                <div class="footer-activities">
+                    <h4>فعالیت‌های ما</h4>
+                    <div class="activities-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <span>کاشت درخت</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span>آموزش محیط زیست</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <span>پاکسازی طبیعت</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                            <span>حفاظت حیات وحش</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <span>بازیافت پسماند</span>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <span>انرژی‌های پاک</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <div class="footer-widget">
+                        <h4>اطلاعات تماس</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> شیراز، بلوار مدرس، ساختمان سبز</li>
+                            <li><i class="fas fa-phone"></i> 071-00000000</li>
+                            <li><i class="fas fa-mobile"></i> 0098-9120472471</li>
+                            <li><i class="fas fa-envelope"></i> Amir MohammadNasab</li>                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>ساخته شده توسط امیر محمدنسب</p>
+                <p>Created By Amir MohammadNasab</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/scripts/pageSwitch.js"></script>
+    <script src="./assets/scripts/eventsData.js"></script>
+    
+</body>
+</html>
